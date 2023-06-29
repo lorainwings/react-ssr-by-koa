@@ -13,7 +13,7 @@ export default class Index extends React.Component {
     constructor(props) {
         super(props);   
 
-        let initialData = null;//初始化数据
+        let initialData = {};//初始化数据
         if(__SERVER__){
             //如果是当然是服务端执行
             initialData = props.staticContext.initialData||{};
