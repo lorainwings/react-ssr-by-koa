@@ -1,7 +1,6 @@
 //路由配置文件
-import React  from 'react';
 
-import Index from '../pages/index';
+import Index from '../pages/index/index';
 import List from '../pages/list';
 
 function pageNotFound() {

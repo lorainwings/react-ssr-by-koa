@@ -58,6 +58,11 @@ export default  async (ctx,next)=>{
         routeList
     }
 
+    // 由于Helmet在组件的render方法中已经注入
+    // 因此下文就可以直接使用Helmet.renderStatic()来进行关联
+    // 最后就可以使用helmet.title.toString 和 helmet.meta.toString来消费使用
+    // 具体关于react-helmet的使用,可以参考https://www.digitalocean.com/community/tutorials/react-react-helmet
+
     const html = renderToString(<StaticRouter><Layout>
         <targetRoute.component initialData={fetchResult} ></targetRoute.component></Layout>
         </StaticRouter>);
