@@ -19,21 +19,22 @@ export default class Index extends React.Component {
 
         this.state = {
             page: initialData.page,
-            fetchData: initialData.fetchData
-        }  
+            fetchData: initialData.fetchData,
+            list: [1, 2, 3]
+        }
     }
 
-    static async  getInitialProps() {
+    static async getInitialProps() {
         console.log('fetch data index');
         //模拟数据请求方法
         //...
 
         return {
-            page:{
-                tdk:{
-                    title:'首页 - react ssr',
-                    keywords:'前端技术江湖',
-                    description:'关键词'
+            page: {
+                tdk: {
+                    title: '首页 - react ssr',
+                    keywords: '前端技术江湖',
+                    description: '关键词'
                 }
             }
         };
@@ -45,7 +46,7 @@ export default class Index extends React.Component {
             Index.getInitialProps().then(res => {
                 this.setState({
                     fetchData: res.fetchData || [],
-                    page:res.page
+                    page: res.page
                 });
 
                 document.title = res.page.tdk.title;
@@ -59,9 +60,17 @@ export default class Index extends React.Component {
 
 
     render() {
+        const { list } = this.state
         return <div className="page-index-box">
-            <p>首页</p>
-        <img src={img}/>
+            {
+                list.length && list.map(() =>
+                    <div>
+                        {list.id} - {list.name}
+                    </div>
+                )
+            }
+            <img src={img} />
         </div>
     }
 }
+

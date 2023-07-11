@@ -16,7 +16,7 @@ import './layout.scss';
         <h1>koa+react+ssr</h1>
         <NavLink to="/index" style={{ marginLeft: "10px" }} >首页</NavLink>   
         <NavLink style={{ marginLeft: "10px" }} to="/list">列表页</NavLink>
-      {this.props.children} 
+        {this.props.children} 
         </div>
     }
 }

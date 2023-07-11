@@ -34,7 +34,10 @@ const watching = compiler.watch({
     }
 
     //编译完成后 通知主进程来重启node 服务
-    console.log(constantCode.SVRCODECOMPLETED);
+    // console.log(constantCode.SVRCODECOMPLETED);
+
+    // 子进程发送消息给父进程
+    process.stdout.write(constantCode.SVRCODECOMPLETED);
 });
 
 compiler.hooks.done.tap('done',function (data) {
