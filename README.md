@@ -1,18 +1,18 @@
-# zz.js (koa2 + react16 + ssr) 服务端渲染应用开发骨架
+# koa2 + react16 + ssr 服务端渲染应用开发骨架
 
 `node10+` `babel7` `react-router5` `webpack4`
 
-## 最清凉（轻量）的 react ssr 应用开发骨架 
+## 轻量的 react ssr 应用开发骨架
 
 * 上手快速: 都是你熟悉的事物，基于 koa2 react16 ssr 搭建
 * 双模式无缝切换: 支持SSR/CSR两种渲染模式，只需更改配置属性即可，也可以对组件设置按需渲染模式
-* 路由分治管理: 你写你的路由，我写我的路由，zz 自动合并，不再需要维护整个路由表
+* 路由分治管理: 多个人写的的理由，自动合并，不再需要维护整个路由表
 * 路由动静结合: 支持组件的按需加载设置，A 路由动态吧，B 路由静态
 * 开放: 代码完全开放，纯白盒，完全可以作为个人的 `ssr` 学习参考资源
 
 # 快速上手
 
- 从这里开始你将了解到怎样让 `zz`  在本地快速的跑起来，然后进行实际项目开发。
+ 从这里开始你将了解到怎样让项目在本地快速的跑起来，然后进行实际项目开发。
 
 ## 环境准备
 
@@ -31,7 +31,7 @@ $ node -v
 
 ```javascript
 
-$ npm i zzjs-cli -g
+npm i zzjs-cli -g
 
 ```
 
@@ -52,9 +52,9 @@ $ open http://<Your local ip>:8808
 可通过不同的命令开启不同的渲染模式。
 
 ```javascript
-$ npm run dev //开启本地开发 可修改配置内的属性 isSSR ，支持两种渲染模式
-$ npm run dev:csr //开启本地开发 并已 wds 为服务启动 - csr 模式
-$ //更多.....
+npm run dev //开启本地开发 可修改配置内的属性 isSSR ，支持两种渲染模式
+npm run dev:csr //开启本地开发 并已 wds 为服务启动 - csr 模式
+//更多.....
 ```
 
 ## 目录结构
@@ -321,9 +321,6 @@ export default class Index extends ZzPageBase{
 }
 ```
 
-
-
-
 ## 伪 PWA 支持
 
 在页面组件内设置`enableSpaDataCache`值，即可开启这个特性。此特性开启后，可以让这个页面的二次访问不再有数据请求，当前是否需要还要根据自己的实际业务触发。
@@ -348,24 +345,4 @@ export default class Index extends zzPageBase{
 
 `this.hasSpaCacheData` 常量 、 表示当前页面内是否有伪 `pwa` 的数据
 
-### 更多 待续....
-
-### Demo 演示（有点丑,别介意）
-
-[http://demo.zz.bigerfe.com](http://demo.zz.bigerfe.com)
-
-### 社区交流
-
-微信群
-
-![](https://github.com/Bigerfe/koa-react-ssr/blob/v1.2/docs/imgs/wxq91701.png?raw=true)
-
-若无法进群，可以加作者微信:`223344386`,回复"进群".
-
-### 作者
-
-笔  名: 张大胖 
-
-公众号: 前端张大胖 
-
-![](https://github.com/Bigerfe/koa-react-ssr/blob/v1/docs/imgs/wxgzh.jpg?raw=true)
+### 更多 待续
